@@ -1,0 +1,22 @@
+<head>
+    <title>Principal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index')}}">Principal</a>
+            <a href="{{ url_for('professores')}}">Professores</a>
+            <a href="{{ url_for('alunos')}}">Alunos</a>
+        </nav>
+        <h1>Página Principal</h1>
+    </header>
+    <main>
+        <h2>Clubes Ativos do Campus</h2>
+        {% for clube in clubes %}
+            <article>
+                <h3>{{clube.nome}}</h3>
+                <p>Professor responsável: {{clube.prof_resp}}<br>Horário: {{clube.horario}}</p>
+            </article>
+        {% endfor %}
+    </main>
+</body>

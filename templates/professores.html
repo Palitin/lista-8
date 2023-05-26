@@ -1,0 +1,20 @@
+<head>
+    <title>Professores</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index')}}">Principal</a>
+            <a href="{{ url_for('professores')}}">Professores</a>
+            <a href="{{ url_for('alunos')}}">Alunos</a>
+        </nav>
+        <h1>Lista dos Professores Ativos no Campus</h1>
+    </header>
+    <main>
+        {% for prof in professores %}
+            <article>
+                
+            </article>
+        {% endfor %}
+    </main>
+</body>
